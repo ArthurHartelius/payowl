@@ -1,0 +1,108 @@
+/* Farverne er de samme som i appen (WorkAndPay/Design/Theme.swift).
+   Kun systemskrifter og ingen eksterne filer: siden må ikke sende besøgendes IP-adresse videre til andre. */
+:root {
+  color-scheme: light dark;
+  --bg: #f8f6ee;
+  --card: #fffdf8;
+  --border: rgba(217, 201, 178, 0.8);
+  --text: #2e3a2f;
+  --muted: #646a5c;
+  --accent: #6b7f5b;
+  --soft: #eef0e6;
+  --hero: #2e3a2f;
+  --on-hero: #f8f6ee;
+  --on-hero-muted: #bfb39f;
+  --action: #c96f4f;
+  --on-action: #f8f6ee;
+  --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a221b;
+    --card: #2e3a2f;
+    --border: rgba(217, 201, 178, 0.16);
+    --text: #f8f6ee;
+    --muted: #bfb39f;
+    --accent: #a3b78f;
+    --soft: rgba(163, 183, 143, 0.12);
+    --hero: #243328;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* Den mørke top, som på appens Hjem-skærm */
+.hero {
+  background: var(--hero);
+  color: var(--on-hero);
+  border-radius: 0 0 28px 28px;
+  padding: 16px 16px 76px;
+}
+.hero-inner { max-width: 720px; margin: 0 auto; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--serif); font-size: 1.3rem; }
+.brand img { width: 36px; height: 36px; border-radius: 8px; }
+.pill {
+  border: 1px solid rgba(248, 246, 238, 0.35);
+  border-radius: 999px;
+  padding: 4px 14px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 7vw, 2.8rem); line-height: 1.15; margin: 44px 0 8px; }
+.hero .meta { color: var(--on-hero-muted); margin: 0; }
+
+/* Indholdet ligger i et kort hen over kanten af toppen */
+.page { padding: 0 16px; }
+.card {
+  max-width: 720px;
+  margin: -44px auto 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px 20px 12px;
+  overflow-wrap: break-word; /* lange e-mailadresser må ikke gøre siden bredere end telefonen */
+}
+h2 { font-family: var(--serif); font-weight: 400; font-size: 1.45rem; line-height: 1.25; margin: 1.6em 0 0.4em; }
+p, ul { margin: 0 0 1em; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 0.55em; }
+.summary, .notice { background: var(--soft); border-radius: 12px; padding: 14px 16px; margin: 16px 0 1em; }
+.notice { border-left: 4px solid var(--action); }
+.summary p:last-child, .notice p:last-child { margin-bottom: 0; }
+
+.button {
+  display: inline-block;
+  background: var(--action);
+  color: var(--on-action);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin: 4px 0 6px;
+}
+.address { color: var(--muted); margin-bottom: 1.4em; user-select: all; }
+
+footer { max-width: 720px; margin: 28px auto 40px; padding: 0 16px; color: var(--muted); font-size: 0.95rem; }
+footer nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+
+/* Forsiden */
+.home { text-align: center; padding-bottom: 84px; }
+.home .app-icon { width: 112px; height: 112px; border-radius: 25px; margin: 28px auto 0; display: block; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3); }
+.home h1 { margin-top: 20px; }
+.home .meta { max-width: 30em; margin: 0 auto; font-size: 1.1rem; }
+.features { list-style: none; padding: 0; margin: 16px 0 4px; }
+.features li { padding: 14px 0; border-bottom: 1px solid var(--border); margin: 0; }
+.features li:last-child { border-bottom: 0; }
+.features strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.2rem; }
