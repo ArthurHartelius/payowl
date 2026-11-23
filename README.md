@@ -1,8 +1,8 @@
-<img src="assets/icon-256.png" width="96" alt="Work&Pay app icon">
+<img src="assets/icon-256.png" width="96" alt="Payowl app icon">
 
-# Work&Pay
+# Payowl
 
-The website for Work&Pay, an iPhone app for keeping track of shifts, supplements and pay after tax for hourly jobs in Denmark.
+The website for Payowl, an iPhone app for keeping track of shifts, supplements and pay after tax for hourly jobs in Denmark.
 
 Every page exists in English and in Danish (under `/da/`). The DA/EN switch at the top right goes to the same page in the other language.
 

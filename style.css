@@ -1,4 +1,4 @@
-/* Farverne er de samme som i appen (WorkAndPay/Design/Theme.swift).
+/* Farverne er de samme som i appen (Payowl/Design/Theme.swift).
    Kun systemskrifter og ingen eksterne filer: siden må ikke sende besøgendes IP-adresse videre til andre. */
 :root {
   color-scheme: light dark;
