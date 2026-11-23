@@ -51,14 +51,22 @@ a:hover { text-decoration-thickness: 2px; }
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--serif); font-size: 1.3rem; }
 .brand img { width: 36px; height: 36px; border-radius: 8px; }
-.pill {
+/* DA/EN-knap: det valgte sprog er fremhævet, det andet er et link til samme side på det sprog */
+.lang-switch {
+  display: inline-flex;
+  margin-left: auto;
   border: 1px solid rgba(248, 246, 238, 0.35);
   border-radius: 999px;
-  padding: 4px 14px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 3px;
 }
+.lang-switch a, .lang-switch span {
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.lang-switch span { background: var(--on-hero); color: var(--hero); }
 .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 7vw, 2.8rem); line-height: 1.15; margin: 44px 0 8px; }
 .hero .meta { color: var(--on-hero-muted); margin: 0; }
 
@@ -99,7 +107,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 
 /* Forsiden */
 .home { text-align: center; padding-bottom: 84px; }
-.home .app-icon { width: 112px; height: 112px; border-radius: 25px; margin: 28px auto 0; display: block; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3); }
+.home .app-icon { width: 112px; height: 112px; border-radius: 25px; margin: 8px auto 0; display: block; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3); }
 .home h1 { margin-top: 20px; }
 .home .meta { max-width: 30em; margin: 0 auto; font-size: 1.1rem; }
 .features { list-style: none; padding: 0; margin: 16px 0 4px; }
